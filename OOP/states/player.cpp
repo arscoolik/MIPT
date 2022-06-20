@@ -166,17 +166,6 @@ void Player::handleAllCollisions(const std::vector<sf::FloatRect>& blocks, const
         mpState->startFalling(this);
 }
 
-bool Player::handleAttackCollision(const sf::FloatRect& enemy)
-{
-    sf::FloatRect swordRect = {mPosition.x + mSwordCollisionRect.left, mPosition.y + mSwordCollisionRect.top, mSwordCollisionRect.width, mSwordCollisionRect.height};
-    float overlapx1 = swordRect.left + swordRect.width - enemy.left;
-    float overlapx2 = enemy.left + enemy.width - swordRect.left;
-    float overlapy1 = swordRect.top + swordRect.height - enemy.top;
-    float overlapy2 = enemy.top + enemy.height - swordRect.top;
-    return (overlapx1 >= 0 && overlapx2 >= 0 && overlapy1 >= 0 && overlapy2 >= 0);
-}
-
-
 Player::~Player()
 {
     delete mpState;
