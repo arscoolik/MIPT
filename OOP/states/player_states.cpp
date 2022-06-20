@@ -80,10 +80,6 @@ void Idle::update(Player* player, float dt)
     {
         player->setState(new Sitting(player));
     }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::X))
-    {
-        player->setState(new FirstAttack(player));
-    }
 }
 
 void Idle::handleEvents(Player* player, const sf::Event& event) 
@@ -105,10 +101,7 @@ void Idle::handleEvents(Player* player, const sf::Event& event)
             player->setState(new Sitting(player));
         }
 
-        else if (event.key.code == sf::Keyboard::X)
-        {
-            player->setState(new FirstAttack(player));
-        }
+
     }
 }
 
