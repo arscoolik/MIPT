@@ -50,11 +50,6 @@ public:
         mPlayer.update(dt);
         mPlayer.handleAllCollisions(mBlocks, mEnemies);
         std::vector<size_t> enemies_to_delete;
-        for (size_t i = 0; i < mEnemies.size(); i++)
-        {
-            if (mPlayer.handleAttackCollision(mEnemies[i]))
-                enemies_to_delete.push_back(i);
-        }
         for (const size_t& enemy_ind: enemies_to_delete) 
             mEnemies.erase(mEnemies.begin() + enemy_ind);
     }
