@@ -21,8 +21,7 @@ public:
     void handleEvents(const sf::Event& event);
     bool handleCollision(const sf::FloatRect& rect);
     void handleAllCollisions(const std::vector<sf::FloatRect>& blocks, const std::vector<sf::FloatRect>& enemies);
-    bool handleAttackCollision(const sf::FloatRect& enemy);
-
+    
     ~Player();
 
     friend class PlayerState;
