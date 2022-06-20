@@ -1,5 +1,6 @@
 #pragma once
 
+
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include "player_states.hpp"
@@ -31,9 +32,6 @@ public:
     friend class Sliding;
     friend class Hooked;
     friend class Sitting;
-    friend class FirstAttack;
-    friend class SecondAttack;
-    friend class ThirdAttack;
 
 
 private:
